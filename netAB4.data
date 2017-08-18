@@ -1,20 +1,33 @@
-@
-
-netAB4
-
-4	10
-
-2
-	1	1.5	2
-	2	1	2
+########## Data for the Net ############
+# all characters until the first 'at'
+# character is neglected when this file
+#  is read.
+#
+# Net name: RndNet_nn4_nl12_seed1503063702
+#
+# format of this file is:
+#
+# net_name
+# total_number_of_nodes 	total_number_of_links
+# number_of_links_connected_to_this_node
+# connects_to_this_node 	weight max-load
+#
+# @
+RndNet_nn4_nl12_seed1503063702
+4	12
 3
-	0	1	2
-	2	1	2
-	3	1	2
+	2	0.131474	4
+	3	0.517795	3
+	1	0.332291	4
 3
-	0	1	2
-	1	1	2
-	3	1	2
-2
-	1	1	2
-	2	1	2
+	2	0.408657	1
+	3	0.158532	4
+	0	0.482789	3
+3
+	0	0.789016	3
+	1	0.392585	5
+	3	0.382855	2
+3
+	0	0.307679	5
+	1	0.557974	3
+	2	0.529086	5

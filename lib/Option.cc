@@ -28,9 +28,12 @@ Option::Option(int argc,char** argv,char* filename/*="mroute.hlp"*/)
     requestfile("genreq.data"), seed(-1), sx(FALSE)
 {
   for (int i=0;i<16;i++) 
-    NNfile[i]="fuzzybellman.parameters";
-  NNfile[6]="na-6-parameters";
-  NNfile[14]="na-14-parameters";
+  NNfile[i]="fuzzybellman.parameters";
+  //NNfile[6]="na-6-parameters";
+  //NNfile[14]="na-14-parameters";
+  NNfile[6]="NN.parameters";
+  NNfile[14]="NN.parameters";
+
 
   char ch=' ';		/* 1st check if help option given	*/
   for (int i=1;i<argc;i++)
