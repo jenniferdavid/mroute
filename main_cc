@@ -1,0 +1,92 @@
+/****************************************/
+/*      main.cc	                        */
+/*      A program for multi routing 	*/
+/*      some connections to 		*/
+/*	Ericssons ATM-routing project 	*/
+/*					*/
+/*      Martin & Jari 2/6-96	        */
+/****************************************/
+
+#include "../lib/net.hh"
+#include <stdlib.h>
+#include "../lib/manswer.hh"
+#include "../lib/mreq.hh"
+#include "../lib/mroute.hh"
+
+/***********************************************************/
+int main(int argc,char *argv[]) {
+
+  Net* net;
+  Mreq* req;
+  int i;
+
+  switch (argc) {
+  case 3:
+    net=new Net(argv[1]);
+    req=new Mreq(net,argv[2]);
+    break;
+  case 4:
+    net = new Net(atoi(argv[1]),atoi(argv[2]));
+    req = new Mreq(net, atoi(argv[3]));
+    break;
+  default:
+    cerr << "Wrong number of arguments.\n\n";
+    cerr << "Syntax: " << argv[0] << " netdatafile requestdatafile, or "
+	 << argv[0] << " #nodes #links #trans\n";
+    exit(-1);
+  }
+  
+  cout << "\nNET:\t" << *net;
+
+  cout << req->get_entropy() << endl;
+
+  cout << endl;
+  if( net->isNormal() )
+    cout << "Net Normal" << endl;
+  else
+    {
+      cout << "\7Net Abnormal!" << endl;
+      exit(-1);
+    }
+
+  cout << endl;
+  cout << "\nREQUESTS:\t" << *req;
+
+  net->reset();
+
+  cout << "bell" << endl;
+
+  Manswer abell(*net,*req, bellman);
+  if( abell.isLegal() )
+    {
+      cout << endl << abell;
+      cout << "\nNET:\t" << *net;
+    }
+  else
+    cout << "Failed" << endl;
+  net->reset();
+  
+  cout << "exact" << endl;
+
+  Manswer aexact(*net,*req, solveexact);
+  //  Fuzzybellman fuzzy(*net,req);
+  if( aexact.isLegal() )
+    {
+      cout << endl << aexact;
+      cout << "\nNET:\t" << *net;
+    }
+
+  net->reset();
+
+  cout << "fuzzy" << endl;
+
+  Manswer afuzzy(*net,*req, fuzzybellman);
+  //  Fuzzybellman fuzzy(*net,req);
+  if( afuzzy.isLegal() )
+    {
+      cout << endl << afuzzy;
+      cout << "\nNET:\t" << *net;
+    }
+
+  return 0;
+}

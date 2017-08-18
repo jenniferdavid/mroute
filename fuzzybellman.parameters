@@ -1,0 +1,12 @@
+Made specially for:
+DN = 0          DSOFT = 1       PSOFT = 0       EA = 0 
+kT_start 	@ 100
+kT_stop		@ 0.0001
+kT_fac		@ 0.9
+sat_stop	@ .9999
+
+Pji_coeff 	@ .000000000000000001
+Load_coeff 	@ 10.
+  
+PLOT		@ 0
+MONITOR		@ 0

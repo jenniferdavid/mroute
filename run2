@@ -1,0 +1,24 @@
+#!/bin/csh
+mroute -ra 2 -se 850165699 -nn 20 -nl 21 -nr 11
+mroute -ra 2 -se 850165700 -nn 20 -nl 21 -nr 12
+mroute -ra 2 -se 850165705 -nn 20 -nl 22 -nr 10
+mroute -ra 2 -se 850165705 -nn 20 -nl 22 -nr 11
+mroute -ra 2 -se 850165705 -nn 20 -nl 22 -nr 12
+mroute -ra 2 -se 850165854 -nn 20 -nl 24 -nr 10
+mroute -ra 2 -se 850165903 -nn 20 -nl 24 -nr 14
+mroute -ra 2 -se 850165911 -nn 20 -nl 24 -nr 15
+mroute -ra 2 -se 850167888 -nn 20 -nl 25 -nr 10
+mroute -ra 2 -se 850167892 -nn 20 -nl 25 -nr 12
+mroute -ra 2 -se 850167898 -nn 20 -nl 25 -nr 13
+mroute -ra 2 -se 850168060 -nn 20 -nl 25 -nr 16
+mroute -ra 2 -se 850170283 -nn 20 -nl 26 -nr 10
+mroute -ra 2 -se 850170284 -nn 20 -nl 26 -nr 11
+mroute -ra 2 -se 850170288 -nn 20 -nl 26 -nr 12
+mroute -ra 2 -se 850170292 -nn 20 -nl 26 -nr 13
+mroute -ra 2 -se 850170452 -nn 20 -nl 26 -nr 14
+mroute -ra 2 -se 850170456 -nn 20 -nl 26 -nr 16
+mroute -ra 2 -se 850170904 -nn 20 -nl 26 -nr 17
+mroute -ra 2 -se 850199462 -nn 20 -nl 27 -nr 11
+mroute -ra 2 -se 850199464 -nn 20 -nl 27 -nr 12
+mroute -ra 2 -se 850199713 -nn 20 -nl 27 -nr 15
+mroute -ra 2 -se 850200155 -nn 20 -nl 27 -nr 16

@@ -1,0 +1,21 @@
+############ Data for the Mreq ###########
+# all characters until the first 'at'
+# character is neglected when this file is
+# read.
+#
+# Mreq name: RndMreq_nr3_RndNet_nn4_nl12_seed1503062237
+#
+# format of this file is:
+#
+# mreq_name
+# total_number_of_transmissions
+# 1 from_node 	to_node
+# 1 from_node 	to_node
+# ...........
+# where the 1 is to be compatible with mcast where it is no of end nodes
+# @
+RndMreq_nr3_RndNet_nn4_nl12_seed1503062237
+3
+1  3	0
+1  0	2
+1  1	0

@@ -1,0 +1,10 @@
+kT_start 	@ 500
+kT_stop		@ 0.001
+kT_fac		@ 0.95
+sat_stop	@ .9999
+
+Pji_coeff 	@ .00000001
+Load_coeff 	@ 10.
+  
+PLOT		@ 0
+MONITOR		@ 0

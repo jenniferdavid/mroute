@@ -1,0 +1,89 @@
+-------------------------------------------------------------------------------
+
+     filename: mroute.hlp   	program: mroute   	project: mroute
+     written by Jari H\"akkinen, Theoretical Physics 2, Lund University
+
+-------------------------------------------------------------------------------
+
+Name
+	mroute
+
+Syntax
+	mroute [options]
+
+Description
+	This program optimizes a network for multiple simultaneous request.
+
+
+	The users must write the main function himself. There are a few classes
+	to be used in the programming:
+
+		Net, Mreq, Manswer, Options
+
+	The Net class contains information about the physical network, Mreq
+	class keeps track of the request to be optimized, and the solution
+	is stored in Manswer. The class Options contains the default parameters
+	which can be changed from the command line. The comman line options
+	are described below.
+
+	
+	There are three algorithms which can be used to optimize the network
+	with the requests:
+		the Bellman-Ford algorithm,
+		a fuzzy Bellman-Ford algorithm, and
+		an exact solution of the problem utilizing the branch and boud
+			algortithm.
+
+Options
+	-cf							(FALSE)
+		Toggle the fixed capacity flag. If set to TRUE the maximum
+		capacity is used for all links in the net. If set to FALSE a
+		random capacity,
+			0 < capacity < (maximum capacity + 1),
+		is used for each of the links.
+		This option will only work if the network is randomly
+		create, i.e. not read from a file.
+	-cm integer						(6)
+		Set the maximum capacity of the links.
+		This option will only work if the network is randomly
+		create, i.e. not read from a file.
+	-gn char*						(gennet.data)
+		If a file is used to define the physical network, this option
+		sets the file to be used.
+		If a random physical netork is used, the used network will
+		be written to the file set by this option.
+	-gr char*						(genreq.data)
+		If a file is used to define the requests, this option sets the
+		file to be used.
+		If random requests are used, the used requests will be written
+		to the file set by this option.
+	-h or -help
+		Prints this file to stdout.
+	-na integer						(-1)
+		Choose which NN algorithm to run. 16 is supposed to run all
+		possible variants in the NN class. -1 will disable the use of
+		the NN algorithms.
+	-nl integer						(6)
+		Sets the number of links in the network.
+	-nn integer						(4)
+		Sets the number of nodes in the network.
+	-nr integer						(3)
+		Sets the number of simultaneous request to be optimized.
+	-pf char*				       (fuzzybellman.parameters)
+		Set one of the auxiliary parameter file names.
+	-pn char*						(NN.parameters)
+		Set another one of the auxiliary parameter file names.
+	-ra integer						(2)
+		Sets the algorithms to be used to define the network and
+		requests.
+			0: Both network and request data are read from file.
+			1: Network data is read from file, request data is
+			   randomized.
+			2: Both network and request data are randomized.
+	-rsbf							(non-random)
+		Toggle if random order in sequential Bellman-Ford is to be used.
+	-se integer
+		Sets the seed to be used, works only if -ra is different from 0.
+	-sx							(FALSE)
+		Toggle the SolveExact flag. If set to TRUE the SolveExact
+		algorithm will be run.

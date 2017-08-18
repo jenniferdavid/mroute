@@ -1,0 +1,6 @@
+#!/bin/csh -f
+cd ../lib
+make
+cd ../bin
+make
+mroute -ra 0 -gn net9.12

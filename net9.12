@@ -1,0 +1,46 @@
+########## Data for the Net ############
+# all characters until the first 'at'
+# character is neglected when this file
+#  is read.
+#
+# format of this file is:
+#
+# total_number_of_nodes 	total_number_of_links
+# number_of_links_connected_to_this_node
+# connects_to_this_node 	weight max-load
+# @
+9	24
+
+4
+	1	2.01	2.01
+	2	2.02	2.02
+	3	2.03	2.03
+	6	2.06	2.06
+2
+	0	2.10	2.10
+	2	2.12	2.12
+2
+	0	2.20	2.20
+	1	2.21	2.21
+4
+	4	2.34	2.34
+	5	2.35	2.35
+	0	2.30	2.30
+	6	2.36	2.36
+2
+	3	2.43	2.43
+	5	2.45	2.45
+2
+	3	2.53	2.53
+	4	2.54	2.54
+4
+	7	2.67	2.67
+	8	2.68	2.68
+	0	2.60	2.60
+	3	2.63	2.63
+2
+	6	2.76	2.76
+	8	2.78	2.78
+2
+	6	2.86	2.86
+	7	2.87	2.87

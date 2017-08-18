@@ -1,0 +1,16 @@
+############ Data for the Mreq ###########
+# all characters until the first 'at'
+# character is neglected when this file is
+# read.
+#
+# format of this file is:
+#
+# total_number_of_transmissions
+# from_node 	to_node
+#
+# @
+
+req.01
+1
+0 1
+
